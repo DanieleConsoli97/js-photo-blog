@@ -7,12 +7,11 @@ axios
        
          const data = rensponse.data
          data.forEach(element => {
-            console.log(element)
-            console.log(element.date)
-            console.log(element.title)
+           
             cards.innerHTML+=
             `
             <div class="card">
+                    <img class="circle" src="./img/background/pin.svg" alt="">
                     <picture class="container_img">
                         <img class="img" src=${element.url} alt="">
                     </picture>

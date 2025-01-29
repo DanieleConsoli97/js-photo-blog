@@ -38,8 +38,14 @@ body{
     flex-basis:100%;
     padding: 20px;
     box-shadow: 10px 10px 5px hsla(0, 0%, 0%, 0.371);
-    transition: transform 0.3s ease
-   
+    transition: transform 0.3s ease;
+    position: relative;
+}
+.circle{
+    position: absolute;
+    top: 4px;
+    left:50%;
+    transform: translate(-50%, -50%)
 }
 .container_img{
     display: flex;
