@@ -12,13 +12,14 @@ font-size: 2rem;
 font-family: 'Edu TAS Beginner', sans-serif;
 text-transform: uppercase; 
 text-align: center;
+
 }
 body{
     background-image: url('../img/background/cork.png');
-   
+
 }
 .container{
-    width: 100%;
+    width: 100%
     
 }
 .container_80{
@@ -36,6 +37,8 @@ body{
     background-color: white;
     flex-basis:100%;
     padding: 20px;
+    box-shadow: 10px 10px 5px hsla(0, 0%, 0%, 0.371);
+    transition: transform 0.3s ease
    
 }
 .container_img{
@@ -47,6 +50,12 @@ body{
 }
 .text{
     margin-top: 20px;
+    font-family: "Sometype Mono", serif;
+    font-size: 1rem;
+}
+.card:hover{
+    transform: scale(1.1) rotate(10deg);
+   
 }
 @media  screen and (min-width: 768px){
     .card{
