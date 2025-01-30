@@ -1,9 +1,9 @@
 const cards = document.querySelector(".cards_main");
-
+let modalAppend = document.querySelector(".append")
 axios.get("https://lanciweb.github.io/demo/api/pictures/").then((rensponse) => {
   const data = rensponse.data;
   let cardsIt = [];
-  let modalAppend = document.querySelector("modale")
+  
   data.forEach((element) => {
     const { date, id, title, url } = element;
     cards.innerHTML += `
@@ -24,10 +24,18 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/").then((rensponse) => {
             `;
     cardsIt = document.querySelectorAll(".img");
   });
+  let imgCorrente =""
   cardsIt.forEach((element) => {
     element.addEventListener("click", function () {
-    
-        console.log("prova",this.src);
+        imgCorrente = this.src
+        modalAppend.innerHTML =`
+        <div class="modale">
+        <div class="modal-content">
+            <button class="close">&times;</button>
+            <img src="${this.src}" alt="">
+          </div>
+        </div>
+        `
     });
   });
 });
